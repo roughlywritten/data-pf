@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박지은 | AX & Data Analyst Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1e3a8a;       /* Deep Navy */
+            --primary-light: #3b82f6; /* Accent Blue */
+            --secondary: #0f172a;     /* Slate Dark */
+            --bg-light: #f8fafc;      /* Clean Gray Body */
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Hero / Header */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 80px 20px 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #93c5fd;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 680px;
+            margin: 0 auto 30px auto;
+            word-break: keep-all;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-light);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: -40px auto 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Info Summary Bar */
+        .info-bar {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-icon {
+            width: 44px;
+            height: 44px;
+            background-color: #eff6ff;
+            color: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-text .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .info-text .value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--primary-light);
+        }
+
+        /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 26px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+        }
+
+        /* Tech Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .skill-tag i {
+            color: var(--primary-light);
+        }
+
+        /* Timeline List */
+        .timeline-list {
+            list-style: none;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+            word-break: keep-all;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+        }
+
+        .project-header {
+            padding: 22px 26px 16px 26px;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .project-period {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: #f8fafc;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .project-body {
+            padding: 20px 26px;
+        }
+
+        .project-summary {
+            font-size: 0.925rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            word-break: keep-all;
+        }
+
+        .project-features {
+            margin-bottom: 20px;
+            padding-left: 18px;
+            color: var(--text-main);
+            font-size: 0.875rem;
+        }
+
+        .project-features li {
+            margin-bottom: 6px;
+        }
+
+        .code-snippet {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.825rem;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .code-snippet .keyword { color: #f472b6; }
+        .code-snippet .function { color: #38bdf8; }
+        .code-snippet .string { color: #4ade80; }
+        .code-snippet .comment { color: #94a3b8; font-style: italic; }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px 0 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge"><i class="fa-solid fa-chart-line"></i> AX & Data Analytics Portfolio</span>
+            <h1>데이터 기반 문제해결사, <span>[박지은]</span>입니다</h1>
+            <p>수리적 분석력과 파이썬/엑셀 기반의 데이터 처리 기술을 바탕으로 비즈니스 인사이트를 도출하고 데이터 기반 혁신(AX)에 기여합니다.</p>
+            <div class="contact-links">
+                <a href="https://github.com/본인아이디" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+                <a href="mailto:본인이메일@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Info Summary Bar -->
+        <div class="info-bar">
+            <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="info-text">
+                    <div class="label">영남대학교 천마인재학과</div>
+                    <div class="value">천마인재학과 수석 졸업 (4.42/4.5)</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-certificate"></i></div>
+                <div class="info-text">
+                    <div class="label">자격 사항</div>
+                    <div class="value">보험계리사 1차 합격 & 2차 응시</div>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="info-text">
+                    <div class="label">주요 역량</div>
+                    <div class="value">Python, Excel Data Analysis</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills & Strengths Section -->
+        <div class="section">
+            <h2 class="section-title"><i class="fa-solid fa-cubes"></i> 핵심 역량 및 기술 스택</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3 style="font-size:1.05rem; margin-bottom:14px; color:var(--secondary);"><i class="fa-solid fa-wrench" style="color:var(--primary-light);"></i> 기술 및 도구</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python (Pandas/BS4)</span>
+                        <span class="skill-tag"><i class="fa-solid fa-file-excel"></i> Excel (Data Clean/Pivot)</span>
+                        <span class="skill-tag"><i class="fa-solid fa-chart-pie"></i> Data Visualization</span>
+                        <span class="skill-tag"><i class="fa-solid fa-file-powerpoint"></i> PPT Reporting</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-size:1.05rem; margin-bottom:14px; color:var(--secondary);"><i class="fa-solid fa-award" style="color:var(--primary-light);"></i> 주요 강점</h3>
+                    <ul class="timeline-list">
+                        <li class="timeline-item">
+                            <div class="timeline-title">수리/재무 데이터 검증 및 분석력</div>
+                            <div class="timeline-desc">계리학 수험 및 학부 수석 졸업을 통해 다진 고도의 데이터 검증 능력</div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-title">트렌드 및 사용자 니즈 관찰력</div>
+                            <div class="timeline-desc">유튜버·블로거·크리에이터 활동으로 다진 시장 지표 관찰 시각</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Project Section -->
+        <div class="section">
+            <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> 주요 분석 프로젝트</h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <div class="project-title">파이썬 기반 웹 데이터 스크래핑 & 콘텐츠 트렌드 분석</div>
+                        <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">
+                            <span style="color:var(--primary-light); font-weight:600;">#AX_Data_Project</span> &bull; 웹 스크래핑, 데이터 정제, 유입 최적화
+                        </div>
+                    </div>
+                    <span class="project-period">2026.08 - 진행 중</span>
+                </div>
+                <div class="project-body">
+                    <p class="project-summary">
+                        네이버 검색 엔진 및 웹 데이터를 파이썬 스크립트로 자동 수집하여 키워드별 검색량과 유입 패턴을 분석하고, 콘텐츠 노출 성과를 데이터 기반으로 최적화하는 프로젝트입니다.
+                    </p>
+
+                    <h4 style="font-size:0.9rem; margin-bottom:8px; color:var(--secondary);">[주요 수행 내용]</h4>
+                    <ul class="project-features">
+                        <li><strong>데이터 자동 수집:</strong> Python <code>requests</code> 및 <code>BeautifulSoup</code> 라이브러리를 사용해 타겟 키워드 검색 결과 크롤링</li>
+                        <li><strong>데이터 전처리:</strong> <code>Pandas</code>를 활용한 결측치 제거, 키워드 빈도수 계산 및 데이터 정형화</li>
+                        <li><strong>성과 시각화:</strong> 분석 결과를 바탕으로 핵심 키워드를 블로그 콘텐츠에 적용해 방문자 유입 성과 추적</li>
+                    </ul>
+
+                    <h4 style="font-size:0.9rem; margin-bottom:8px; color:var(--secondary);">[파이썬 크롤링 코드 스니펫]</h4>
+                    <div class="code-snippet">
+<span class="keyword">import</span> requests
+<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup
+<span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+
+<span class="comment"># 네이버 검색 결과 수집 함수 예시</span>
+<span class="keyword">def</span> <span class="function">fetch_keyword_data</span>(keyword):
+    url = <span class="string">f"https://search.naver.com/search.naver?query={keyword}"</span>
+    headers = {<span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0"</span>}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, <span class="string">'html.parser'</span>)
+    
+    titles = [title.text <span class="keyword">for</span> title <span class="keyword">in</span> soup.select(<span class="string">".title_area"</span>)]
+    <span class="keyword">return</span> pd.DataFrame({<span class="string">"Keyword"</span>: keyword, <span class="string">"Title"</span>: titles})
+
+print(<span class="string">"Data Processing Complete!"</span>)
+                    </div>
+
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <span class="skill-tag" style="font-size:0.775rem; background:#eff6ff; color:#1e40af; border-color:#bfdbfe;">Python 3.x</span>
+                        <span class="skill-tag" style="font-size:0.775rem; background:#eff6ff; color:#1e40af; border-color:#bfdbfe;">BeautifulSoup4</span>
+                        <span class="skill-tag" style="font-size:0.775rem; background:#eff6ff; color:#1e40af; border-color:#bfdbfe;">Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career Section -->
+        <div class="section">
+            <h2 class="section-title"><i class="fa-solid fa-user-check"></i> 세부 경험 및 이력</h2>
+            <div class="card">
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="timeline-title">보험계리사 1차 시험 합격 & 2차 응시 (2026)</div>
+                        <div class="timeline-desc">보험수리학, 연금수리학, 재무관리 등 대규모 수리적 데이터 모델 및 현금흐름 분석 학습</div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-title">자유여행 데이터 가공 및 여행북 출판 경험</div>
+                        <div class="timeline-desc">경비, 동선 등 방대한 비정형 일상 데이터를 구조화하여 가독성 높은 책자로 가공·발간</div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-title">경영학부 수석 졸업 (학점 4.42 / 4.5)</div>
+                        <div class="timeline-desc">회계·세무·재무관리 전공 과정을 이수하며 기업 데이터 분석 및 자산가치 평가 수리 능력 검증</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
