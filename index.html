@@ -1,513 +1,145 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박지은 | AX & Data Analyst Portfolio</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #1e3a8a;       /* Deep Navy */
-            --primary-light: #3b82f6; /* Accent Blue */
-            --secondary: #0f172a;     /* Slate Dark */
-            --bg-light: #f8fafc;      /* Clean Gray Body */
-            --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-        }
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>박지은 | 상품개발 인턴 지원 포트폴리오</title>
+<style>
+:root{--blue:#0090da;--navy:#0a3a5c;--green:#5fae3a;--lgreen:#eef7e8;--lblue:#e8f4fb;--ink:#1d2b36;--mute:#5b6b78}
+*{box-sizing:border-box}
+body{margin:0;background:#e9eef2;font-family:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);line-height:1.6;font-size:14px}
+.page{width:210mm;min-height:297mm;margin:16px auto;background:#fff;padding:16mm 16mm 14mm;position:relative;overflow:hidden}
+.page::before{content:"";position:absolute;left:0;top:0;right:0;height:8px;background:linear-gradient(90deg,var(--blue),var(--green))}
+h1{font-size:30px;margin:6px 0 2px;color:var(--navy)}
+h2{font-size:20px;margin:0 0 4px;color:var(--navy)}
+h2 .n{display:inline-block;background:var(--green);color:#fff;border-radius:50%;width:28px;height:28px;text-align:center;line-height:28px;font-size:15px;margin-right:8px}
+h3{font-size:14px;margin:14px 0 4px;color:var(--blue);border-left:4px solid var(--green);padding-left:8px}
+.sub{color:var(--mute);margin:0 0 10px}
+.tag{display:inline-block;background:var(--lblue);color:var(--navy);border-radius:10px;padding:1px 9px;font-size:12px;margin:0 3px 3px 0}
+.box{background:var(--lgreen);border-radius:8px;padding:9px 12px;margin:8px 0}
+.box.b{background:var(--lblue)}
+.ph{background:#fff3b0;padding:0 3px;border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:6px 0}
+th{background:var(--navy);color:#fff;padding:5px 7px;text-align:left}
+td{border-bottom:1px solid #d8e2e8;padding:5px 7px;vertical-align:top}
+ul{margin:4px 0;padding-left:18px}
+.foot{position:absolute;bottom:8mm;left:16mm;right:16mm;font-size:11px;color:var(--mute);display:flex;justify-content:space-between}
+a{color:var(--blue)}
+@page{size:A4;margin:0}
+@media print{body{background:#fff}.page{margin:0;box-shadow:none;page-break-after:always;break-after:page}.ph{background:none}tr,.box{break-inside:avoid}}
+</style></head><body>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<!-- 1. 표지 + 지원동기 -->
+<section class="page">
+<p style="color:var(--green);font-weight:700;margin:0">With U Career 2027 Winter Internship · 상품개발</p>
+<h1>박지은</h1>
+<p class="sub">AI로 상품 동향을 읽고, 숫자로 검증하는 상품개발 지망생</p>
+<p><span class="ph">[이메일/tsi03010@naver.com]</span> · <span class="ph">[연락처/010-7335-1551]</span> ·  <span class="ph">[GitHub 주소/https://roughlywritten.github.io/data-pf/]</span></p>
+<h3>지원동기</h3>
+<p><span class="ph">[AI 시대에 AI를 잘 쓰는 보험계리사가 되고 싶어 지원했습니다.
 
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
+AI가 빠르게 발전하는 것을 보며 유튜브로 활용법을 배웠고, 배운 것을 직접 써 보며 익혀 왔습니다. 보험계리사 시험을 준비하면서 보험사 취업에 필요한 데이터 포트폴리오를 만들기 위해 엑셀을 공부하던 중, 엑셀에도 AI를 접목할 수 있다는 것을 알게 되었고, 이를 활용해 뉴욕 여행서를 직접 제작하여 출판에 성공하였습니다.
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+최근에는 가장 관심 있는 레켐비 관련 보장을 주제로, 배타적사용권 획득 사례를 정리하며 상품 동향을 분석하고 향후 상품을 예측해 보았습니다. 이 과정에서 AI가 만든 결과를 원문과 대조하며 검증하는 습관이 중요하다는 것을 배웠습니다.
 
-        /* Hero / Header */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: #ffffff;
-            padding: 80px 20px 60px 20px;
-            text-align: center;
-        }
+올해 처음으로 응시한 보험계리사 1차와 2차 시험(3과목 응시)에서 부분합격한 상태이며, 내년 최종합격을 목표로 끝까지 준비하겠습니다. 다만 계리 전문성에 AI 활용 역량이 더해질 때 더 큰 가치를 만들 수 있다고 생각합니다. 메트라이프가 공고에서 AI Fluency를 갖춘 인재를 찾는다고 밝힌 것을 보고, 제가 지향하는 방향과 같다고 느꼈습니다. 이곳에서라면 제가 목표하는 ‘AI를 잘 쓰는 보험계리사'로 성장할 수 있다고 생각해 지원했습니다.]</span></p>
+<h3>이 포트폴리오를 한 장으로</h3>
+<table>
+<tr><th style="width:26%">프로젝트</th><th>공고 업무와의 연결</th></tr>
+<tr><td><b>① 보험상품 동향 분석</b><br>레켐비 배타적사용권</td><td>시장 트렌드·경쟁사 상품 분석을 통한 상품 기획 지원</td></tr>
+<tr><td><b>② 포트폴리오 웹 개발</b><br>Claude Code + GitHub</td><td>AI 및 자동화 기술 활용, 문서 작성·관리 효율화</td></tr>
+<tr><td><b>③ 엑셀 + AI 출판</b><br>뉴욕 여행서</td><td>Excel 활용 능력, 데이터 정리·검증, 콘텐츠 기획</td></tr>
+<tr><td><b>④ 자격·성과</b></td><td>보험계리 기초 역량(수석졸업, 2차 연금수리학 부분합격)</td></tr>
+</table>
+<div class="box"><b>AI 활용 원칙</b> — AI가 만든 결과는 반드시 원문·원자료와 대조하고, 확인하지 못한 것은 확인하지 못했다고 적습니다.</div>
+<div class="foot"><span>박지은 포트폴리오</span><span>1</span></div>
+</section>
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+<!-- 2. 프로젝트 1 -->
+<section class="page">
+<h2><span class="n">1</span>보험상품 동향 분석 — 표적치매치료(레켐비) 배타적사용권</h2>
+<p class="sub">공개 기사 기반 · AI로 구조화 후 직접 검증</p>
+<p><span class="tag">Claude Code</span><span class="tag">Claude API</span><span class="tag">원문 대조 검증</span></p>
+<h3>흐름: 진단금 → 치료비 → 검사·부작용 → 구조 혁신</h3>
+<table>
+<tr><th style="width:15%">시점</th><th style="width:16%">회사</th><th>내용</th></tr>
+<tr><td>2024.12</td><td>흥국화재</td><td>알츠하이머 치료제 담보, 9개월 배타적사용권 취득</span></td></tr>
+<tr><td>2026.01</td><td>흥국화재</td><td>투약 중 MRI 검사비 보장 특약(최대 150만원)</td></tr>
+<tr><td>2026.07</td><td>삼성생명</td><td>레켐비 치료 + ARIA-H(뇌출혈) 부작용 통합 보장 특약 (업계 최초 도입)</td></tr>
+<tr><td>2026.08</td><td>AIA생명</td><td>최경도 치매+아밀로이드 PET 결합 특약</span></td></tr>
+<tr><td>2026.10</td><td>흥국화재</td><td>미사용 보장한도를 이연하는 구조</td></tr>
+</table>
+<h3>메트라이프 관점 (공개 기사 기준)</h3>
+<ul>
+<li>제가 확인한 범위에서 메트라이프생명 상품 중 레켐비 등 표적치매치료 담보는 찾지 못했습니다. 최근 확인된 신상품은 변액리치정기보험(2026.10), 360Health 치료지원팩(2026.9), 의료인보험(2026.7)입니다.</li>
+<li>따라서 이 분야는 <b>"공백일 수 있는 영역"</b>이며, 약관·내부 라인업은 외부에서 알 수 없어 인턴십에서 직접 배우고 싶은 부분입니다.</li>
+</ul>
+<h3>향후 상품 가설 (추정)</h3>
+<ul>
+<li><b>조기 진단 연계</b>: 혈액 바이오마커·PET 검사. 급여화 여부와 검사 접근성이 위험률의 핵심 변수</li>
+<li><b>치료 지속성</b>: 반복 MRI, 투약 중단·재개까지 묶는 통합형</li>
+<li><b>서비스 결합</b>: 치료지원 서비스형(360Health 같은 서비스 구조와의 접목)</li>
+<li><b>부작용 보장 확대</b>: ARIA-H를 넘어 ARIA-E(뇌부종)까지 보장</li>
+</ul>
+<h3>자동화와 검증</h3>
+<p>기사 URL을 입력하면 회사·특약명·지급 트리거·부여 기간을 JSON으로 추출하고 CSV·타임라인으로 정리하는 스크립트를 Claude Code로 작성했습니다. <span class="ph">[AI가 '확인 필요'라고 하는 부분과 '기사로 추정'한 부분에 대해서는 '이미 알고 있는 지식 활용+협회 공시실 직접 확인'으로 수정하여 기록하였습니다.]</span></p>
+<p style="font-size:12px;color:var(--mute)">※ 한계: AI가 공개 기사 기반으로 작성하여 관련 내용 숙지와 협회 공시 전수 확인은 필요했습니다.</p>
+<div class="foot"><span>박지은 포트폴리오</span><span>2</span></div>
+</section>
 
-        .badge {
-            display: inline-block;
-            background: rgba(59, 130, 246, 0.2);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            color: #93c5fd;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
+<!-- 3. 프로젝트 2 -->
+<section class="page">
+<h2><span class="n">2</span>AI로 만든 포트폴리오 웹페이지 — Claude Code + GitHub</h2>
+<p class="sub">기획 → 구현 → 배포를 AI와 협업한 경험</p>
+<p><span class="tag">Claude Code</span><span class="tag">GitHub</span><span class="tag">GitHub Pages</span><span class="tag">HTML/CSS</span></p>
+<h3>무엇을 했나</h3>
+<ul>
+<li>Claude Code로 페이지 구조를 구현하고 GitHub 저장소로 버전을 관리해 GitHub Pages로 배포</span></li>
+<li>지원서 PDF 제출용 인쇄 레이아웃(A4)을 별도로 설계</span></li>
+</ul>
+<h3>본인이 한 일 vs AI가 한 일</h3>
+<table>
+<tr><th style="width:50%">본인이 결정·검증한 것</th><th>AI에 맡긴 것</th></tr>
+<tr><td><span class="ph">[페이지 구성, 문구 작성, 허위·과장 내용 삭제 및 수정]</span></td><td><span class="ph">[코드 초안, 레이아웃 스타일링]</span></td></tr>
+</table>
+<h3>배운 점</h3>
+<div class="box b"><span class="ph">[코딩을 따로 배운 적은 없었지만, AI가 작성한 코드를 끝까지 읽고 수정해 보는 과정에서 반복되는 구조가 많다는 것을 알게 되었습니다. 패턴이 보이자 각 코드가 어떤 역할을 하는지 이해할 수 있었고, 이후에는 직접 코드를 고쳐 원하는 결과물을 만들 수 있게 되었습니다.
 
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
+먼저 부딪혀 보고, 모르는 부분은 진행하면서 채워 가는 방식이 학습 속도를 크게 높여 준다는 것을 체감했습니다. 이는 'Roll with the punches'라는 말을 떠올리게 했습니다. 이 경험을 바탕으로 업무에서도 모르는 영역을 두려워하지 않고, AI를 활용해 빠르게 익히며 성장하겠습니다.]</span></div>
+<h3>상품개발 업무와의 연결</h3>
+<p>약관·사업방법서·상품안내자료처럼 정확성이 중요한 문서는 AI 초안 + 사람의 검증 구조가 필요하다고 생각하며, 이 프로젝트에서 그 방식을 직접 실천했습니다.</p>
+<div class="foot"><span>박지은 포트폴리오</span><span>3</span></div>
+</section>
 
-        .hero h1 span {
-            color: #60a5fa;
-        }
+<!-- 4. 프로젝트 3 -->
+<section class="page">
+<h2><span class="n">3</span>엑셀 + AI로 만든 뉴욕 여행서 출판</h2>
+<p class="sub">데이터 정리와 콘텐츠 기획의 결합</p>
+<p><span class="tag">Excel</span><span class="tag">AI 활용</span><span class="tag">출판</span></p>
+<h3>개요</h3>
+<table>
+<tr><td style="width:22%"><b>출판 형태</b></td><td><span class="ph">[전자책, 2025년 12월 1일 출간]</span></td></tr>
+<tr><td><b>엑셀 활용</b></td><td><span class="ph">[여행 예산(항공·숙박·식비·교통·입장료 등)을 엑셀에 정리하고, 피벗테이블로 항목별·일자별 지출을 집계해 책에 실을 예산 가이드의 근거로 활용했습니다.]</span></td></tr>
+<tr><td><b>AI 활용</b></td><td><span class="ph">[책과 관련된 YouTube Shorts를 제작했고, 영상 편집 도구 Vrew의 AI 기능을 활용했습니다. 해당 영상은 조회수 약 2.3천 회를 기록했습니다.]</span></td></tr>
+</table>
+<h3>상품개발과의 연결</h3>
+<ul>
+<li>여행자의 필요를 구조화해 콘텐츠를 설계한 경험은 고객 니즈를 보장 항목으로 옮기는 상품 기획과 닮아 있습니다.</li>
+<li>엑셀로 데이터를 정리하고 오류를 점검한 경험은 상품 수익성·고객가치 분석 업무의 기본기가 됩니다.</li>
+</ul>
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            max-width: 680px;
-            margin: 0 auto 30px auto;
-            word-break: keep-all;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-light);
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: #2563eb;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: rgba(255, 255, 255, 0.08);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-outline:hover {
-            background-color: rgba(255, 255, 255, 0.18);
-            transform: translateY(-2px);
-        }
-
-        /* Container */
-        .container {
-            max-width: 960px;
-            margin: -40px auto 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Info Summary Bar */
-        .info-bar {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 24px 30px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 40px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .info-icon {
-            width: 44px;
-            height: 44px;
-            background-color: #eff6ff;
-            color: var(--primary-light);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .info-text .label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .info-text .value {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        /* Section */
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-title i {
-            color: var(--primary-light);
-        }
-
-        /* Grid */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 26px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
-        }
-
-        /* Tech Tags */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background-color: #f1f5f9;
-            color: #334155;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .skill-tag i {
-            color: var(--primary-light);
-        }
-
-        /* Timeline List */
-        .timeline-list {
-            list-style: none;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 16px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background-color: var(--primary-light);
-        }
-
-        .timeline-title {
-            font-weight: 700;
-            color: var(--secondary);
-            font-size: 0.95rem;
-        }
-
-        .timeline-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-            word-break: keep-all;
-        }
-
-        /* Project Card */
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
-        }
-
-        .project-header {
-            padding: 22px 26px 16px 26px;
-            border-bottom: 1px solid #f1f5f9;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .project-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .project-period {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            background: #f8fafc;
-            padding: 4px 8px;
-            border-radius: 4px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .project-body {
-            padding: 20px 26px;
-        }
-
-        .project-summary {
-            font-size: 0.925rem;
-            color: var(--text-main);
-            margin-bottom: 16px;
-            word-break: keep-all;
-        }
-
-        .project-features {
-            margin-bottom: 20px;
-            padding-left: 18px;
-            color: var(--text-main);
-            font-size: 0.875rem;
-        }
-
-        .project-features li {
-            margin-bottom: 6px;
-        }
-
-        .code-snippet {
-            background-color: #0f172a;
-            color: #f8fafc;
-            padding: 16px;
-            border-radius: 8px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.825rem;
-            overflow-x: auto;
-            margin-bottom: 16px;
-            line-height: 1.5;
-        }
-
-        .code-snippet .keyword { color: #f472b6; }
-        .code-snippet .function { color: #38bdf8; }
-        .code-snippet .string { color: #4ade80; }
-        .code-snippet .comment { color: #94a3b8; font-style: italic; }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px 0 20px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <span class="badge"><i class="fa-solid fa-chart-line"></i> AX & Data Analytics Portfolio</span>
-            <h1>데이터 기반 문제해결사, <span>[박지은]</span>입니다</h1>
-            <p>수리적 분석력과 파이썬/엑셀 기반의 데이터 처리 기술을 바탕으로 비즈니스 인사이트를 도출하고 데이터 기반 혁신(AX)에 기여합니다.</p>
-            <div class="contact-links">
-                <a href="https://github.com/본인아이디" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub Profile</a>
-                <a href="mailto:본인이메일@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Contact Me</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        
-        <!-- Info Summary Bar -->
-        <div class="info-bar">
-            <div class="info-item">
-                <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <div class="info-text">
-                    <div class="label">영남대학교 천마인재학과</div>
-                    <div class="value">천마인재학과 수석 졸업 (4.42/4.5)</div>
-                </div>
-            </div>
-            <div class="info-item">
-                <div class="info-icon"><i class="fa-solid fa-certificate"></i></div>
-                <div class="info-text">
-                    <div class="label">자격 사항</div>
-                    <div class="value">보험계리사 1차 합격 & 2차 부분합격</div>
-                </div>
-            </div>
-            <div class="info-item">
-                <div class="info-icon"><i class="fa-solid fa-code"></i></div>
-                <div class="info-text">
-                    <div class="label">주요 역량</div>
-                    <div class="value">Python, Excel Data Analysis</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills & Strengths Section -->
-        <div class="section">
-            <h2 class="section-title"><i class="fa-solid fa-cubes"></i> 핵심 역량 및 기술 스택</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3 style="font-size:1.05rem; margin-bottom:14px; color:var(--secondary);"><i class="fa-solid fa-wrench" style="color:var(--primary-light);"></i> 기술 및 도구</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python (Pandas/BS4)</span>
-                        <span class="skill-tag"><i class="fa-solid fa-file-excel"></i> Excel (Data Clean/Pivot)</span>
-                        <span class="skill-tag"><i class="fa-solid fa-chart-pie"></i> Data Visualization</span>
-                        <span class="skill-tag"><i class="fa-solid fa-file-powerpoint"></i> PPT Reporting</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3 style="font-size:1.05rem; margin-bottom:14px; color:var(--secondary);"><i class="fa-solid fa-award" style="color:var(--primary-light);"></i> 주요 강점</h3>
-                    <ul class="timeline-list">
-                        <li class="timeline-item">
-                            <div class="timeline-title">수리/재무 데이터 검증 및 분석력</div>
-                            <div class="timeline-desc">계리학 수험 및 학부 수석 졸업을 통해 다진 고도의 데이터 검증 능력</div>
-                        </li>
-                        <li class="timeline-item">
-                            <div class="timeline-title">트렌드 및 사용자 니즈 관찰력</div>
-                            <div class="timeline-desc">유튜버·블로거·크리에이터 활동으로 다진 시장 지표 관찰 시각</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Featured Project Section -->
-        <div class="section">
-            <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> 주요 분석 프로젝트</h2>
-            
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <div class="project-title">파이썬 기반 웹 데이터 스크래핑 & 콘텐츠 트렌드 분석</div>
-                        <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">
-                            <span style="color:var(--primary-light); font-weight:600;">#AX_Data_Project</span> &bull; 웹 스크래핑, 데이터 정제, 유입 최적화
-                        </div>
-                    </div>
-                    <span class="project-period">2026.08 - 진행 중</span>
-                </div>
-                <div class="project-body">
-                    <p class="project-summary">
-                        네이버 검색 엔진 및 웹 데이터를 파이썬 스크립트로 자동 수집하여 키워드별 검색량과 유입 패턴을 분석하고, 콘텐츠 노출 성과를 데이터 기반으로 최적화하는 프로젝트입니다.
-                    </p>
-
-                    <h4 style="font-size:0.9rem; margin-bottom:8px; color:var(--secondary);">[주요 수행 내용]</h4>
-                    <ul class="project-features">
-                        <li><strong>데이터 자동 수집:</strong> Python <code>requests</code> 및 <code>BeautifulSoup</code> 라이브러리를 사용해 타겟 키워드 검색 결과 크롤링</li>
-                        <li><strong>데이터 전처리:</strong> <code>Pandas</code>를 활용한 결측치 제거, 키워드 빈도수 계산 및 데이터 정형화</li>
-                        <li><strong>성과 시각화:</strong> 분석 결과를 바탕으로 핵심 키워드를 블로그 콘텐츠에 적용해 방문자 유입 성과 추적</li>
-                    </ul>
-
-                    <h4 style="font-size:0.9rem; margin-bottom:8px; color:var(--secondary);">[파이썬 크롤링 코드 스니펫]</h4>
-                    <div class="code-snippet">
-<span class="keyword">import</span> requests
-<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup
-<span class="keyword">import</span> pandas <span class="keyword">as</span> pd
-
-<span class="comment"># 네이버 검색 결과 수집 함수 예시</span>
-<span class="keyword">def</span> <span class="function">fetch_keyword_data</span>(keyword):
-    url = <span class="string">f"https://search.naver.com/search.naver?query={keyword}"</span>
-    headers = {<span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0"</span>}
-    response = requests.get(url, headers=headers)
-    soup = BeautifulSoup(response.text, <span class="string">'html.parser'</span>)
-    
-    titles = [title.text <span class="keyword">for</span> title <span class="keyword">in</span> soup.select(<span class="string">".title_area"</span>)]
-    <span class="keyword">return</span> pd.DataFrame({<span class="string">"Keyword"</span>: keyword, <span class="string">"Title"</span>: titles})
-
-print(<span class="string">"Data Processing Complete!"</span>)
-                    </div>
-
-                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                        <span class="skill-tag" style="font-size:0.775rem; background:#eff6ff; color:#1e40af; border-color:#bfdbfe;">Python 3.x</span>
-                        <span class="skill-tag" style="font-size:0.775rem; background:#eff6ff; color:#1e40af; border-color:#bfdbfe;">BeautifulSoup4</span>
-                        <span class="skill-tag" style="font-size:0.775rem; background:#eff6ff; color:#1e40af; border-color:#bfdbfe;">Pandas</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Career Section -->
-        <div class="section">
-            <h2 class="section-title"><i class="fa-solid fa-user-check"></i> 세부 경험 및 이력</h2>
-            <div class="card">
-                <ul class="timeline-list">
-                    <li class="timeline-item">
-                        <div class="timeline-title">보험계리사 1차 시험 합격 & 2차 연금수리학 부분합격 (2026)</div>
-                        <div class="timeline-desc">보험수리학, 연금수리학, 재무관리 등 대규모 수리적 데이터 모델 및 현금흐름 분석 학습</div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-title">자유여행 데이터 가공 및 여행북 출판 경험</div>
-                        <div class="timeline-desc">경비, 동선 등 방대한 비정형 일상 데이터를 구조화하여 가독성 높은 책자로 가공·발간</div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-title">금융전공 수석 졸업 (학점 4.42 / 4.5)</div>
-                        <div class="timeline-desc">회계·세무·재무관리 전공 과정을 이수하며 기업 데이터 분석 및 자산가치 평가 수리 능력 검증</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<h2><span class="n">4</span>자격·성과와 지원 포부</h2>
+<h3>보험계리 관련</h3>
+<table>
+<tr><th style="width:30%">내용</th><th>세부</th></tr>
+<tr><td><b>회계·금융 전공 수석졸업</b></td><td><span class="ph">[영남대학교 천마인재학과(2025년 8월 졸업) 학점 4.42/4.5]</span></td></tr>
+<tr><td><b>보험계리사 1차 및 2차 연금수리학 부분합격</b></td><td><span class="ph">[2026년도 /2차 보험수리학, 연금수리학, 재무관리 및 금융공학 응시]</span></td></tr>
+</table>
+<h3>인턴십 포부</h3>
+<ul>
+<li>경쟁사 상품과 시장 동향을 근거 중심으로 정리하는 분석 지원</li>
+<li>반복 업무(자료 수집·정리, 문서 초안)를 AI로 줄이되 검증 절차를 함께 설계</li>
+<li>계리 역량을 바탕으로 상품 수익성 관점의 질문을 던지는 인턴</li>
+</ul>
+<div class="box"><b>마무리</b> — 변화하는 시대에 발맞춰 회사와 함께 성장하는 인재가 되겠습니다.</span></div>
+<div class="foot"><span>박지은 포트폴리오</span><span>5</span></div>
+</section>
+</body></html>
